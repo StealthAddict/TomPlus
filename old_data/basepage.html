@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!--view testpage w/ cmd+shift+v-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="styles.css">
+        <title>TOM+</title>
+        
+    </head>
+    
+    <body>
+        <!--Create banner at top of screen-->
+        <div id="banner">
+            <img src="Images/TOM_logo_3.png" height=150px>
+        </div>
+        <button class="selection-tab" onclick="openPage('Home', this, '#e2f4c7')" id="defaultOpen">HOME</button>
+        <button class="selection-tab" onclick="openPage('Announcements', this, '#6fcb9f')">ANNOUNCEMENTS</button>
+        <button class="selection-tab" onclick="openPage('Temp', this, '#ffe28a')">TEMP</button>
+        <button class="selection-tab" onclick="openPage('Temp2', this, '#fffeb3')">TEMP2</button>
+        
+
+        <div id="Home" class="tab-content">
+            <p>This is the home page.
+                God no, comic sans is such an awful font.
+            </p>
+        </div>
+        <div id="Announcements" class="tab-content">
+            <p>IFTT ig</p>
+            <!-- <p>This page contains announcements Tommy/an admin can post themselves to the website via a form 
+                through the admin account.
+            </p>
+            <p>
+                This may also contain tweets and instagram posts, as well as new YouTube uploads from all
+                his social media accounts in between the manual posts.
+            </p> -->
+        </div>
+        <div id="Temp" class="tab-content">
+            <p>This is a temp page!</p>
+        </div>
+        <div id="Temp2" class="tab-content">
+            <p>This is the second temp page!</p>
+        </div>
+
+
+        <!-- <h1>This is the beginning of the Tom+ website.</h1>
+        <img src="tommy_face.png">
+
+        <p>I need some test paragraphs to test things. Now here is a <span>span element</span>
+        and a <a href="https://google.com">link</a>.</p>
+
+        <p>This is the second paragraph. It contains an <em>emphasized</em> element.</p>
+
+        <ul>
+            <li>Item <span class="special">one</span></li>
+            <li class="special">Item two</li>
+            <li>Item <em>three</em></li>
+        </ul>
+
+        <p>I literally have no experience in web development.</p> -->
+
+
+        <script>
+            function openPage(pageName, elm, color) {
+                var i, tabcontent, selectionTab;
+                tabcontent = document.getElementsByClassName("tab-content");
+                for (i = 0; i < tabcontent.length; i++){
+                    tabcontent[i].style.display = "none";
+                }
+
+                selectionTab = document.getElementsByClassName("selection-tab")
+                for (i = 0; i < selectionTab.length; i++){
+                    selectionTab[i].style.backgroundColor = "";
+                }
+
+                document.getElementById(pageName).style.display = "block";
+                elm.style.backgroundColor = color;
+            }
+            // get element w/ id="defaultOpen" and click on it
+            document.getElementById("defaultOpen").click();
+        </script>
+    </body>
+
+</html>
