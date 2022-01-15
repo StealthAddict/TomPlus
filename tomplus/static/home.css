@@ -210,9 +210,11 @@ a:hover {
 .box {
     display: block;
     height: 400px;
-    width:50%;
+    width: 50%;
     text-align: center;
     display:inline-block;
+    padding: 0;
+
 }
 
 .video-box {
@@ -221,6 +223,11 @@ a:hover {
     transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     -webkit-transform: translateY(-50%);   
+
+    margin: 0;
+    /* In case we can't find a solution */
+    overflow-x: hidden;
+
 }
 
 .video-button {
