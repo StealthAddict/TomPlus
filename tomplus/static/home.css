@@ -43,17 +43,6 @@ h1, h2, h3 {
     font-family: Dosis-Extrabold;
 }
 
-#surprise-me {
-}
-
-#main-channel {
-}
-
-#vlog-adventures {
-}
-
-#twitch-vods {
-}
 
 .selection-tab {
     background-color: #f0f0da;
@@ -164,12 +153,12 @@ a:hover {
 
 
 
-.scroll-container {
+.marquee-container {
     display: flex;
     align-items: center;
 }
 
-/* marquee/scroll */
+/* marquee */
 @keyframes slide {
     from { left: 100%;}
     to { left: -100%;}

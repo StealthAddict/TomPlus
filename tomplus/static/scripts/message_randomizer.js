@@ -1,6 +1,6 @@
 var msgList = ["Home of Big Men", "Exclusive to TommyInnit Enjoyers", "Just killed a woman, feeling good",
                  "pog champ", "Jump in the cadillac", "Subscribe and Prime", "AAAAAAAAAAAAAAAAAA",
-                "poggers", "The Goggy fanclub", "- .... .. ... / .. ... / .- / - . ... -"]
+                "poggers", "The Goggy fanclub", "- .... .. ... / .. ... / .- / - . ... -", "I am massive"]
 
 function getRandomInt(max){
     return Math.floor(Math.random() * max);

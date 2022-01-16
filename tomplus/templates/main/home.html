@@ -14,7 +14,7 @@
       <h1 class="home-title">WELCOME TO TOMPLUS</h1>
       <h3 class="text-uppercase home-title" id="home-message"></h3>
       <div>
-        <a class="m-2 home-link" href="#">Join the Discord</a>
+        <a class="m-2 home-link" href="{{ url_for('misc.discord') }}">Join the Discord</a>
         <a class="m-2 home-link" href="#">NFT Collection</a>
       </div>
     </div>
@@ -22,7 +22,7 @@
   <div style="height: 181px">
     <div class="ribbon" style="background-color: #f0ccb8; top:469px;"></div>
     <div class="ribbon" style="background-color: #acccc6; top: 559px;"></div>
-    <div class="scroll-container below-ribbon">
+    <div class="marquee-container below-ribbon">
       <div class="marquee">
         <div class="text">Welcome to TomPlus! Enjoy your stay in the most quality website.</div>      </div>
     </div>
@@ -52,6 +52,15 @@
 
     </div>
   </div>
+  <div class="ribbon" style="background-color: #f0ccb8; top: 1450px"></div>
+
+  <div id="scrolling-container">
+    <header style="height: 50px; text-align: center;">
+      <h2 class="mt-5" style="color: black;">Featured Fan-Art</h2>
+    </header>
+    <!-- should make a db to hold fan art so admin account can add and delete art. also helps with sizing -->
+  </div>
+
   
 </body>
     

@@ -62,36 +62,20 @@
       </main>
 
       <!-- Faux header -->
-        <a class="col-md-3 selection-tab btn btn-default br-0" href="{{ url_for('main.home') }}" 
-        id="Home">HOME</a>
-        <a class="col-md-3 selection-tab btn btn-default br-0" href="{{ url_for('main.announcements') }}" 
-        id="Announcements">ANNOUNCEMENTS</a>
-        <a class="col-md-3 selection-tab btn btn-default br-0" href="{{ url_for('main.content') }}"
-        id="Content">CONTENT</a>
-        <a class="col-md-3 selection-tab btn btn-default br-0" href="{{ url_for('main.about') }}"
-        id="About">ABOUT</a>
+      <a class="col-md-3 selection-tab btn btn-default br-0" href="{{ url_for('main.home') }}" 
+      id="Home">HOME</a>
+      <a class="col-md-3 selection-tab btn btn-default br-0" href="{{ url_for('main.announcements') }}" 
+      id="Announcements">ANNOUNCEMENTS</a>
+      <a class="col-md-3 selection-tab btn btn-default br-0" href="{{ url_for('main.content') }}"
+      id="Content">CONTENT</a>
+      <a class="col-md-3 selection-tab btn btn-default br-0" href="{{ url_for('main.about') }}"
+      id="About">ABOUT</a>
 
       <!-- Tabs -->
-      <div id="Home" class="tab-content">
-        <!-- <div class="higher">
-            <p>
-                This is the home page.
-                God no, comic sans is such an awful font.
-            </p>
-        </div>   -->
-      </div>
-      <div id="Announcements" class="tab-content">
-      </div>
-      <div id="Content" class="tab-content">
-        <!-- <div class="higher">
-            <p>This is a content page!</p>
-        </div>  -->
-      </div>
-      <div id="About" class="tab-content">
-        <!-- <div class="higher">
-          <p>This is the about page!</p>
-        </div> -->
-      </div>
+      <!-- <div id="Home" class="tab-content"></div>
+      <div id="Announcements" class="tab-content"></div>
+      <div id="Content" class="tab-content"></div>
+      <div id="About" class="tab-content"></div> -->
 
       {% block content %}{% endblock %}
   

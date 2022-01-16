@@ -27,9 +27,11 @@ def create_app(config_class=Config):
     from tomplus.posts.routes import posts
     from tomplus.main.routes import main
     from tomplus.errors.handlers import errors
+    from tomplus.misc.routes import misc
     app.register_blueprint(users)
     app.register_blueprint(posts)
     app.register_blueprint(main)
     app.register_blueprint(errors)
+    app.register_blueprint(misc)
 
     return app
