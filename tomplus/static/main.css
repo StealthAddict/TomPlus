@@ -95,10 +95,7 @@ body {
   .shadow-banner {
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0, 0.55); /* Black w/opacity/see-through */
-    position: absolute;
-    top: 300px;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    
     z-index: 5;
     width: 100%;
     padding: 30px;
