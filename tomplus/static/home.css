@@ -32,11 +32,11 @@ h1, h2, h3 {
 }
 
 #Content{
-    background-color: #ffe28a;
+    background-color: #FFF8C1;
 }
 
 #About{
-    background-color: #fffeb3;
+    background-color: #e2f4c7;
 }
 
 #home-message{
@@ -102,11 +102,22 @@ a:hover {
 }
 
 .home-bg-img {
-    background: url(site_images/tom_home_page.jpg) center center fixed;
+    background: url(site_images/tom_home_banner.jpg) center center fixed;
     height: 330px;
     width: 100%;
     filter: contrast(75%);
 
+    position:absolute;
+    top: 139px;
+    z-index: 4;
+
+}
+
+.content-bg-img {
+    background: url(site_images/tom_content_banner.jpg) center center fixed;
+    height: 330px;
+    width: 100%;
+    filter: contrast(70%);
     position:absolute;
     top: 139px;
     z-index: 4;
@@ -201,8 +212,29 @@ a:hover {
     height: 400px;
     width: 50%;
     text-align: center;
+    align-items: center;
     display:inline-block;
     padding: 0;
+}
+
+
+.box-content {
+    display: grid;
+    height: 450px;
+    width: 33%;
+    text-align: center;
+    align-items: center;
+    display:inline-block;
+    padding: 0;
+    grid-template-columns: 120px 120px 120px;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.inner-box {
+    height: 350px; 
+    background-color: #743940B3; 
+    color:antiquewhite;
 
 }
 
