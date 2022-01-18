@@ -71,14 +71,27 @@
       <a class="col-md-3 selection-tab btn btn-default br-0" href="{{ url_for('main.about') }}"
       id="About">ABOUT</a>
 
-      <!-- Tabs -->
-      <!-- <div id="Home" class="tab-content"></div>
-      <div id="Announcements" class="tab-content"></div>
-      <div id="Content" class="tab-content"></div>
-      <div id="About" class="tab-content"></div> -->
 
       {% block content %}{% endblock %}
   
+
+      <!-- FOOTER -->
+      <div style="background-color: #2c2c2c; height:200px;">
+        <div class="ml-3" style="padding-top: 10px;">
+          <h1>
+            TOM SIMONS
+            <div>
+              <a href="https://www.instagram.com/tommyinnit/"><img src="{{ url_for('static', filename='site_images/instagram_icon.png') }}" width="32px"></a>
+              <a href="https://www.twitch.tv/tommyinnit"><img src="{{ url_for('static', filename='site_images/twitch_icon.png') }}" width="32px" href=""></a>
+              <a href="https://www.reddit.com/r/tommyinnit/"><img src="{{ url_for('static', filename='site_images/reddit_icon.png') }}" width="32px" href=""></a>
+              <a href="https://www.youtube.com/c/TommyInnit"><img src="{{ url_for('static', filename='site_images/youtube_icon.png') }}" width="32px" href=""></a>
+              <a href="https://twitter.com/tommyinnit"><img src="{{ url_for('static', filename='site_images/twitter_icon.png') }}" width="32px" href=""></a>
+            </div>
+          </h1>
+            <p style="padding-top: 50px; color: antiquewhite; font-family: monospace; font-size: 15px;">Created by <a href="https://www.youtube.com/channel/UCGF6Z9CgXHrydlbUKfUjQwQ" style="color:antiquewhite">DEAD HANDS</a></p>
+        </div>
+      </div>
+
       <!-- Optional JavaScript from getbootstrap.com-->
       <!-- jQuery first, then Popper.js, then Bootstrap JS -->
       <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
