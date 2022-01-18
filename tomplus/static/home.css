@@ -23,6 +23,7 @@ h1, h2, h3 {
 
 
 
+
 #Home {
     background-color: #eee5d5;
 }
@@ -64,23 +65,11 @@ h1, h2, h3 {
     font-size: 17px;
 }
 
-.selection-tab:hover{
-    background-color: #f0f0dad5;
-}
 
 a:hover {
     color: #54463e;
 }
 
-.tab-content{
-    position: absolute;
-    top: 139px;
-    width: 100%;
-    height: 100%;
-    font-family: monospace;
-    padding: 100px 20px;
-    display: none;
-}
 
 .higher {
     position: absolute;
@@ -220,7 +209,7 @@ a:hover {
 
 .box-content {
     display: grid;
-    height: 450px;
+    height: auto;
     width: 33%;
     text-align: center;
     align-items: center;
@@ -232,8 +221,8 @@ a:hover {
 }
 
 .inner-box {
-    height: 350px; 
-    background-color: #743940B3; 
+    height: auto; 
+    background-color: #2e2a39d8; 
     color:antiquewhite;
 
 }
@@ -246,6 +235,8 @@ a:hover {
     -webkit-transform: translateY(-50%);   
 
     margin: 0;
+    /* width: 80%; */
+    /* height:auto; */
     /* In case we can't find a solution */
     overflow-x: hidden;
 
@@ -264,5 +255,14 @@ a:hover {
 .vb-container {
     width: 80%;
     display: inline-block;
+}
+
+.external-link {
+    color: antiquewhite;
+    text-decoration: underline;
+}
+
+.external-link:hover {
+    color: #f0ccb8;  
 }
 
