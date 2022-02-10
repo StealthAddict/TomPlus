@@ -70,3 +70,10 @@ class ResetPasswordForm(FlaskForm):
     confirm_password = PasswordField('Confirm Password',
                                      validators=[DataRequired(), EqualTo('password')])
     submit = SubmitField('Reset Password')
+
+
+class AddFanartForm(FlaskForm):
+    image = FileField('Add Fanart', validators=[FileAllowed(['png', 'jpg', 'jpeg'])])
+    artist = StringField('Artist Name', validators=[DataRequired()])
+    submit = SubmitField('Add Art')
+

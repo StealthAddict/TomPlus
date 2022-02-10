@@ -1,20 +1,22 @@
 {% extends "bases/base_home.html" %}
 {% block content %}
-<body id="Content">
+<body style="background-color: #eee5d5;">
     <div style="height: 388px; width: 100%;">
         <div class="container-fluid content-bg-img"></div>
         <div class="container-fluid home-bg-text text-center">
-          <h1 class="home-title" style="color:#FFF8C1;">CHANNELS</h1>
+          <h1 class="home-title" style="color:#fbdcce;">CHANNELS</h1>
         </div>
     </div>
-    <div style="height: 100px">
-        <div class="ribbon" style="background-color: #5a7876; top: 469px;"></div>
-        <div class="ribbon" style="background-color: #acccc6; top: 519px;"></div>
+    <div style="height: 150px">
+        <div class="ribbon" style="background-color: #c3848fce; top: 469px;"></div>
+        <div class="ribbon" style="background-color: #e3b8b2; top: 519px;"></div>
     </div>
+
+    <div class="ribbon-title"><h1>YOUTUBE</h1></div>
     <div class="row" style="height:fit-content;">
         <div class="box-content">
-            <div class="mt-5 mr-3 ml-5 inner-box">
-                <img src="{{ url_for('static', filename='site_images/tommyinnit_pfp.jpg')}}" class="rounded-circle mt-3" style="filter: drop-shadow(0 0 0.75rem #2e2a39);">
+            <div class="mr-3 ml-5 inner-box">
+                <img src="{{ url_for('static', filename='site_images/tommyinnit_pfp.jpg')}}" class="rounded-circle mt-3" style="filter: drop-shadow(0 0 0.75rem #66202A);">
                 <h3 class="mt-1">TommyInnit</h3>
                 <a href="https://www.youtube.com/c/TommyInnit" class="external-link">YouTube</a>
                 <p class="m-2" style="font-size: 14px;">
@@ -28,8 +30,8 @@
             </div>
         </div>
         <div class="box-content" style="position:absolute; left:33%;">
-            <div class="mt-5 mr-3 ml-3 inner-box">
-                <img src="{{ url_for('static', filename='site_images/tomsimons_pfp.jpg')}}" class="rounded-circle mt-3" style="filter: drop-shadow(0 0 0.75rem #2e2a39);">
+            <div class="mr-3 ml-3 inner-box">
+                <img src="{{ url_for('static', filename='site_images/tomsimons_pfp.jpeg')}}" class="rounded-circle mt-3" style="filter: drop-shadow(0 0 0.75rem #66202A);">
                 <h3 class="mt-1">Tom Simons</h3>
                 <a href="https://www.youtube.com/c/TomSimonsVlog" class="external-link">YouTube</a>
                 <p class="m-2" style="font-size: 14px;">
@@ -43,8 +45,8 @@
             </div>
         </div>
         <div class="box-content" style="position:absolute; left:66%;">
-            <div class="mt-5 mr-4 ml-3 inner-box">
-                <img src="{{ url_for('static', filename='site_images/tommyoutit_pfp.jpg')}}" class="rounded-circle mt-3" style="filter: drop-shadow(0 0 0.75rem #2e2a39);">
+            <div class="mr-4 ml-3 inner-box">
+                <img src="{{ url_for('static', filename='site_images/tommyoutit_pfp.jpg')}}" class="rounded-circle mt-3" style="filter: drop-shadow(0 0 0.75rem #66202A);">
                 <h3 class="mt-1">TommyOutit</h3>
                 <a href="https://www.youtube.com/channel/UCgAyQyy6x3L-tmM1GICelGA" class="external-link">YouTube</a>
                 <p class="m-2" style="font-size: 14px;">
@@ -59,9 +61,9 @@
         </div>
     </div>
     <div class="row" style="height:fit-content;">
-        <div class="box-content">
-            <div class="mt-5 mr-3 ml-5 inner-box">
-                <img src="{{ url_for('static', filename='site_images/tommyvods_pfp.jpg')}}" class="rounded-circle mt-3" style="filter: drop-shadow(0 0 0.75rem #2e2a39);">
+        <div class="box-content" >
+            <div class="mr-3 ml-5 inner-box">
+                <img src="{{ url_for('static', filename='site_images/tommyvods_pfp.jpg')}}" class="rounded-circle mt-3" style="filter: drop-shadow(0 0 0.75rem #66202A);">
                 <h3 class="mt-1">TommyVODS</h3>
                 <a href="https://www.youtube.com/channel/UC9gVCa6ap-KDayMRPg5wjIg" class="external-link">YouTube</a>
                 <p class="m-2" style="font-size: 14px;">
@@ -74,21 +76,22 @@
             </div>
         </div>
         <div class="box-content" style="position:absolute; left:33%;">
-            <div class="mt-5 mr-3 ml-3 inner-box">
-                <img src="{{ url_for('static', filename='site_images/tommyinnit_pfp.jpg')}}" class="rounded-circle mt-3" style="filter: drop-shadow(0 0 0.75rem #2e2a39);">
-                <h3 class="mt-1">@tommyinnit</h3>
-                <a href="https://www.tiktok.com/@tommyinnit" class="external-link">TikTok</a>
+            <div class="mr-3 ml-3 inner-box">
+                <img src="{{ url_for('static', filename='site_images/tomaye_pfp.jpg')}}" class="rounded-circle mt-3" style="filter: drop-shadow(0 0 0.75rem #66202A);">
+                <h3 class="mt-1">tomaye</h3>
+                <a href="https://www.youtube.com/channel/UC6xUVN7hFL43GY9Uz7xQvsg/featured" class="external-link">YouTube</a>
                 <p class="m-2" style="font-size: 14px;">
-                    "incredibly influential tiktokker"
+                    "i spend a lot of time editing"
                 </p>
                 <p class="ml-3 mr-3" style="padding-bottom: 10px;">
-                    A TikTok channel for short funny goofs and gafs.
+                    The forgotten YouTube channel where Tom made group videos with his friends.
                 </p>
+                
             </div>
         </div>
         <div class="box-content" style="position:absolute; left:66%;">
-            <div class="mt-5 mr-4 ml-3 inner-box">
-                <img src="{{ url_for('static', filename='site_images/channelnutpig_pfp.jpg')}}" class="rounded-circle mt-3" style="filter: drop-shadow(0 0 0.75rem #2e2a39);">
+            <div class="mr-4 ml-3 inner-box">
+                <img src="{{ url_for('static', filename='site_images/channelnutpig_pfp.jpg')}}" class="rounded-circle mt-3" style="filter: drop-shadow(0 0 0.75rem #66202A);">
                 <h3 class="mt-1">Channelnutpig</h3>
                 <a href="https://www.youtube.com/c/channelnutpig" class="external-link">YouTube</a>
                 <p class="m-2" style="font-size: 14px;">
@@ -101,10 +104,11 @@
             </div>
         </div>
     </div>
+    <div class="ribbon-title"><h1>TWITCH</h1></div>
     <div class="row" style="height:fit-content;">
         <div class="box-content">
-            <div class="mt-5 mr-3 ml-5 inner-box" style="left:33%;">
-                <img src="{{ url_for('static', filename='site_images/tommyinnit_pfp.jpg')}}" class="rounded-circle mt-3" style="filter: drop-shadow(0 0 0.75rem #2e2a39);">
+            <div class="mr-3 ml-5 inner-box">
+                <img src="{{ url_for('static', filename='site_images/tommyinnit_pfp.jpg')}}" class="rounded-circle mt-3" style="filter: drop-shadow(0 0 0.75rem #66202A);">
                 <h3 class="mt-1">tommyinnit</h3>
                 <a href="https://www.twitch.tv/tommyinnit" class="external-link">Twitch</a>
                 <p class="m-2" style="font-size: 14px;">
@@ -117,8 +121,8 @@
             </div>
         </div>
         <div class="box-content" style="position:absolute; left:33%;">
-            <div class="mt-5 mr-3 ml-3 inner-box">
-                <img src="{{ url_for('static', filename='site_images/tommyinnitalt_pfp.png')}}" class="rounded-circle mt-3" style="filter: drop-shadow(0 0 0.75rem #2e2a39);">
+            <div class="mr-3 ml-3 inner-box">
+                <img src="{{ url_for('static', filename='site_images/tommyinnitalt_pfp.png')}}" class="rounded-circle mt-3" style="filter: drop-shadow(0 0 0.75rem #66202A);">
                 <h3 class="mt-1">tommyinnitalt</h3>
                 <a href="https://www.twitch.tv/tommyinnitalt" class="external-link">Twitch</a>
                 <p class="m-2" style="font-size: 14px;">
@@ -126,13 +130,99 @@
                 </p>
                 <p class="ml-3 mr-3" style="padding-bottom: 10px;">
                     An alt Twitch channel for chill streams. Tom
-                    typically stream Animal Crossing here.
+                    typically streams Animal Crossing here.
+                </p>
+            </div>
+        </div>
+        
+    </div>
+    <div class="ribbon-title"><h1>TWITTER</h1></div>
+    <div class="row" style="height:fit-content;">
+        <div class="box-content">
+            <div class="mr-3 ml-5 inner-box" style="left:33%;">
+                <img src="{{ url_for('static', filename='site_images/tommyinnit_pfp.jpg')}}" class="rounded-circle mt-3" style="filter: drop-shadow(0 0 0.75rem #66202A);">
+                <h3 class="mt-1">@tommyinnit</h3>
+                <a href="https://twitter.com/tommyinnit?s=20" class="external-link">Twitter</a>
+                <p class="m-2" style="font-size: 14px;">
+                    "incredibly influential gamer"
+                </p>
+                <p class="ml-3 mr-3" style="padding-bottom: 10px;">
+                    General Tommy mischief and schenanigans.
+                </p>
+            </div>
+        </div>
+        <div class="box-content" style="position:absolute; left:33%;">
+            <div class="mr-3 ml-3 inner-box">
+                <img src="{{ url_for('static', filename='site_images/tommyaltinnit_pfp.jpeg')}}" class="rounded-circle mt-3" style="filter: drop-shadow(0 0 0.75rem #66202A);">
+                <h3 class="mt-1">@tommyinnitalt</h3>
+                <a href="https://twitter.com/tommyaltinnit?s=20" class="external-link">Twitter</a>
+                <p class="m-2" style="font-size: 14px;">
+                    "friendly neighourhood INFLUENCER"
+                </p>
+                <p class="ml-3 mr-3" style="padding-bottom: 10px;">
+                    Funny pictures and simple messages.
+                </p>
+            </div>
+        </div>
+        <div class="box-content" style="position:absolute; left:66%;">
+            <div class="mr-3 ml-3 inner-box">
+                <img src="{{ url_for('static', filename='site_images/tomsimons_pfp.jpeg')}}" class="rounded-circle mt-3" style="filter: drop-shadow(0 0 0.75rem #66202A);">
+                <h3 class="mt-1">@tomsimons</h3>
+                <a href="https://twitter.com/tomsimons?s=20" class="external-link">Twitter</a>
+                <p class="m-2" style="font-size: 14px;">
+                    "incredibly influential vlogger"
+                </p>
+                <p class="ml-3 mr-3" style="padding-bottom: 10px;">
+                    Updates and behind the scenes about Tom's vlogs.
                 </p>
             </div>
         </div>
     </div>
+    <div class="ribbon-title"><h1>EXTRA</h1></div>
+    <div class="row" style="height:fit-content;">
+        <div class="box-content">
+            <div class="mr-3 ml-5 inner-box" >
+                <img src="{{ url_for('static', filename='site_images/tiktok_logo.png')}}" class="rounded-circle mt-3" style="filter: drop-shadow(0 0 0.75rem #66202A);">
+                <h3 class="mt-1">@tommyinnit</h3>
+                <a href="https://www.tiktok.com/@tommyinnit" class="external-link">TikTok</a>
+                <p class="m-2" style="font-size: 14px;">
+                    "incredibly influential tiktokker"
+                </p>
+                <p class="ml-3 mr-3" style="padding-bottom: 10px;">
+                    A TikTok channel for short funny goofs and gafs.
+                </p>
+            </div>
+        </div>
+        <div class="box-content" style="position:absolute; left:33%;">
+            <div class="mr-3 ml-3 inner-box">
+                <img src="{{ url_for('static', filename='site_images/spotify_logo.jpeg')}}" class="rounded-circle mt-3" style="filter: drop-shadow(0 0 0.75rem #66202A);">
+                <h3 class="mt-1">Tommyinnit</h3>
+                <a href="https://open.spotify.com/artist/25Ge8p6YT8EwmLTRFtf8Wi?si=LN955n27TM2Uf0EWUtEPWA" class="external-link">Spotify</a>
+                <p class="m-2" style="font-size: 14px;">
+                    "29,000+ monthly listeners"
+                </p>
+                <p class="ml-3 mr-3" style="padding-bottom: 10px;">
+                    <small>Honestly not sure what's going on here. It's a bit concerning.</small>
+                </p>
+            </div>
+        </div>
+        <div class="box-content" style="position:absolute; left:66%;">
+            <div class="mr-3 ml-3 inner-box">
+                <img src="{{ url_for('static', filename='site_images/instagram_logo.jpeg')}}" class="rounded-circle mt-3" style="filter: drop-shadow(0 0 0.75rem #66202A);">
+                <h3 class="mt-1">@tommyinnit</h3>
+                <a href="https://www.instagram.com/tommyinnit/" class="external-link">Instagram</a>
+                <p class="m-2" style="font-size: 14px;">
+                    "incredibly influential gamer"
+                </p>
+                <p class="ml-3 mr-3" style="padding-bottom: 10px;">
+                    Self portraiture.
+                </p>
+            </div>
+        </div>
+    </div>
+
     
-    <div class="ribbon" style="background-color: #acccc6; position: inherit;"></div>
-    <div class="ribbon" style="background-color: #5a7876; position: inherit;"></div>
+    <div class="ribbon" style="background-color: #e3b8b2; position: inherit;"></div>
+    <div class="ribbon" style="background-color: #c3848fce; position: inherit;"></div>
 </body>
 {% endblock content %}

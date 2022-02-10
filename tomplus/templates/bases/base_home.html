@@ -17,7 +17,7 @@
           <title>TOM+</title>
       {% endif %}
     </head>
-    <body>
+    <body style="background-color: #eee5d5;">
       <!-- Thinking of having a row above the tabs for some breathing room
         the space could contain a scrolling message bar that says something? -->
 
@@ -27,7 +27,7 @@
           <div class="container-fluid">
             <div class="navbar-header navbar-left">
               <a class="navbar-brand" href="{{ url_for('main.home') }}">
-                <img class="banner-image" alt="Brand" src="{{ url_for('static', filename='site_images/TOM_logo_3.png') }}">
+                <img class="banner-image" alt="Brand" style="max-height: 53px;" src="{{ url_for('static', filename='site_images/TOM_logo_3.png') }}">
               </a>
             </div>
             <!-- Navbar Right Side -->
@@ -36,8 +36,8 @@
                 <a class="nav-item nav-link" href="{{ url_for('users.account') }}">Account</a>
                 <a class="nav-item nav-link" href="{{ url_for('users.logout') }}">Logout</a>
               {% else %}
-                <a class="nav-item nav-link" href="{{ url_for('users.login') }}">Login</a>
-                <a class="nav-item nav-link" href="{{ url_for('users.register') }}">Register</a>
+                <!-- <a class="nav-item nav-link" href="{{ url_for('users.login') }}">Login</a>
+                <a class="nav-item nav-link" href="{{ url_for('users.register') }}">Register</a> -->
               {% endif %}
             </div>
           </div>
@@ -70,13 +70,14 @@
       id="Content">CONTENT</a>
       <a class="col-md-3 selection-tab btn btn-default br-0" href="{{ url_for('main.about') }}"
       id="About">ABOUT</a>
+      
 
 
       {% block content %}{% endblock %}
   
 
       <!-- FOOTER -->
-      <div style="background-color: #2c2c2c; height:200px;">
+      <div style="background-color: #2c2c2c; height:180px;">
         <div class="ml-3" style="padding-top: 10px;">
           <h1>
             TOM SIMONS
@@ -88,28 +89,14 @@
               <a href="https://twitter.com/tommyinnit"><img src="{{ url_for('static', filename='site_images/twitter_icon.png') }}" width="32px" href=""></a>
             </div>
           </h1>
-            <p style="padding-top: 50px; color: antiquewhite; font-family: monospace; font-size: 15px;">Created by <a href="https://www.youtube.com/channel/UCGF6Z9CgXHrydlbUKfUjQwQ" style="color:antiquewhite">DEAD HANDS</a></p>
+            <p style="padding-top: 25px; color: antiquewhite; font-family: monospace; font-size: 15px;">Created by <a href="https://www.youtube.com/channel/UCGF6Z9CgXHrydlbUKfUjQwQ" style="color:antiquewhite">DEAD HANDS</a></p>
         </div>
       </div>
 
-      <!-- Optional JavaScript from getbootstrap.com-->
+      <!-- JavaScript from getbootstrap.com-->
       <!-- jQuery first, then Popper.js, then Bootstrap JS -->
       <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  
-      <script>
-        function openPage(pageName, elm, color) {
-            var i, selectionTab;
-
-            selectionTab = document.getElementsByClassName("selection-tab")
-            for (i = 0; i < selectionTab.length; i++){
-                selectionTab[i].style.backgroundColor = "";
-            }
-            elm.style.backgroundColor = color;
-        }
-        // get element w/ id="defaultOpen" and click on it
-        document.getElementById("defaultOpen").click();
-    </script>
   </body>
 </html>

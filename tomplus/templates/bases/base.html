@@ -23,7 +23,7 @@
           <div class="container-fluid">
             <div class="navbar-header">
               <a class="navbar-brand" href="{{ url_for('main.home') }}">
-                <img class="banner-image" alt="Brand" src="{{ url_for('static', filename='site_images/TOM_logo_3.png') }}">
+                <img class="banner-image" alt="Brand" style="max-height: 53px;" src="{{ url_for('static', filename='site_images/TOM_logo_3.png') }}">
               </a>
               
             </div>
@@ -57,6 +57,23 @@
         </div>
       </main>
       {% block content %}{% endblock %}
+
+      <!-- FOOTER -->
+      <div style="background-color: #2c2c2c; height:180px;">
+        <div class="ml-3" style="padding-top: 10px;">
+          <h1>
+            TOM SIMONS
+            <div>
+              <a href="https://www.instagram.com/tommyinnit/"><img src="{{ url_for('static', filename='site_images/instagram_icon.png') }}" width="32px"></a>
+              <a href="https://www.twitch.tv/tommyinnit"><img src="{{ url_for('static', filename='site_images/twitch_icon.png') }}" width="32px" href=""></a>
+              <a href="https://www.reddit.com/r/tommyinnit/"><img src="{{ url_for('static', filename='site_images/reddit_icon.png') }}" width="32px" href=""></a>
+              <a href="https://www.youtube.com/c/TommyInnit"><img src="{{ url_for('static', filename='site_images/youtube_icon.png') }}" width="32px" href=""></a>
+              <a href="https://twitter.com/tommyinnit"><img src="{{ url_for('static', filename='site_images/twitter_icon.png') }}" width="32px" href=""></a>
+            </div>
+          </h1>
+            <p style="padding-top: 25px; color: antiquewhite; font-family: monospace; font-size: 15px;">Created by <a href="https://www.youtube.com/channel/UCGF6Z9CgXHrydlbUKfUjQwQ" style="color:antiquewhite">DEAD HANDS</a></p>
+        </div>
+      </div>
   
       <!-- Optional JavaScript from getbootstrap.com-->
       <!-- jQuery first, then Popper.js, then Bootstrap JS -->

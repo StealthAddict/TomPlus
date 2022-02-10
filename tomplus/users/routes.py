@@ -2,10 +2,10 @@ from flask import (render_template, url_for, flash, redirect,
                     request, Blueprint)
 from flask_login import login_user, current_user, logout_user, login_required                    
 from tomplus import db, bcrypt
-from tomplus.models import User, Post
+from tomplus.models import User, Post, Fanart
 from tomplus.users.forms import (RegistrationForm, LoginForm, UpdateAccountForm,
-                                    RequestResetForm, ResetPasswordForm)
-from tomplus.users.utils import save_picture, send_reset_email
+                                    RequestResetForm, ResetPasswordForm, AddFanartForm)
+from tomplus.users.utils import save_picture, send_reset_email, save_art
 
 users = Blueprint('users', __name__)
 
@@ -62,8 +62,18 @@ def account():
         form.username.data = current_user.username
         form.email.data = current_user.email
     image_file = url_for('static', filename='profile_pics/' + current_user.image_file)
+
+    art_form = AddFanartForm()
+    if art_form.image.data:
+        artist_image = save_art(art_form.image.data)
+        new_art = Fanart(image=artist_image, artist=art_form.artist.data)
+        db.session.add(new_art)
+        db.session.commit()
+        flash('New art added to homepage!', 'success')
+        return redirect(url_for('users.account'))
+
     return render_template('account.html', title='Account',
-                           image_file=image_file, form=form)
+                           image_file=image_file, form=form, art_form=art_form)
 
 @users.route("/user/<string:username>")
 def user_posts(username):

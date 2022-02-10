@@ -2,8 +2,10 @@
 
 {% extends "bases/base_home.html" %}
 {% block content %}
-<body id="Home">
+<body style="background-color: #eee5d5;">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script language="javascript" type="text/javascript" src="{{ url_for('static', filename='scripts/message_randomizer.js')}}"></script>
+  <script language="javascript" type="text/javascript" src="{{ url_for('static', filename='scripts/video_selection.js')}}"></script>
   <script language="javascript" type="text/javascript" src="{{ url_for('static', filename='scripts/xbMarquee.js')}}"></script>
   
   
@@ -19,49 +21,69 @@
       </div>
     </div>
   </div>
-  <div style="height: 181px">
+  <div style="height: 191px">
     <div class="ribbon" style="background-color: #f0ccb8; top:469px;"></div>
-    <div class="ribbon" style="background-color: #acccc6; top: 559px;"></div>
+    <div class="ribbon" style="background-color: #acccc6; top:569px;"></div>
     <div class="marquee-container below-ribbon">
       <div class="marquee">
-        <div class="text">Welcome to TomPlus! Enjoy your stay in the most quality website.</div>      </div>
+        <div class="text">Welcome to TomPlus! One day I'll make this marquee wrap around, I swear.</div>      
+      </div>
     </div>
   </div>
-  <div>
+  <div style="width: 100%; height: auto;">
     <div class="box" style="background-color: #5a7876;">
       <h1 class="mt-5 ml-4 mr-4 mb-3" style="color: #eee5d5; display: inline-block;">Feeling bored? Watch a Video!</h1>
       <div class="vb-container">
-        <div class="row"> <button class="btn mb-3 video-button col-md-12" id="surprise-me">Surprise Me!</button> </div>
-        <div class="row"> <button class="btn mb-3 video-button col-md-12" id="main-channel">Main Channel</button> </div>
-        <div class="row"> <button class="btn mb-3 video-button col-md-12" id="vlog-adventures">Vlog Adventures</button> </div>
-        <div class="row"> <button class="btn mb-3 video-button col-md-12" id="twitch-vods">Twitch VODs</button> </div>
+        <div class="row"> <button class="btn mb-3 video-button col-md-12"  onclick="surpriseVid()">Surprise Me!</button> </div>
+        <div class="row"> <button class="btn mb-3 video-button col-md-12" onclick="mainVid()">Main Channel</button> </div>
+        <div class="row"> <button class="btn mb-3 video-button col-md-12" onclick="vlogVid()">Vlog Adventures</button> </div>
+        <div class="row"> <button class="btn mb-3 video-button col-md-12" onclick="twitchVid()">Twitch VODs</button> </div>
       </div>
     </div>
-    <div class="box" style="position:absolute; left: 50%;">
+    <div class="box" style="position:absolute; left: 50%; ">
       <div class="video-box">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/1Z1bvTYKNUw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+        <iframe id="home-video" width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
       </div>
     </div> 
   </div>
 
-  <div>
-    <div class="box">
+  <div class="ribbon" style="background-color: #acccc6; position: inherit;"></div>
 
-    </div>
-    <div class="box" style="position:absolute; left:50%; background-color: #743940;">
+  <h1 style="color: black; text-align: center; padding-top: 10px;">Featured Fan Art</h1>
+  <div class="ribbon" style="background-color: #f0ccb8; position:inherit;"></div>
 
-    </div>
+  <div style="width: 100%; height:35rem; position:relative; text-align: center; background-color: #2c2c2cb4; padding-bottom: 10px;">
+    <!-- change to database with picture & artist -->
+    {% for art in fanart %}
+      <div class="slides"><img class="slides-picture" src="{{ url_for('static', filename='/site_images/fanart/' + art.image) }}"><p style="color:antiquewhite;">{{ art.artist }}</p></div>
+    {% endfor %}
+    
+    <button class="pic-buttons but-display-l"  style="width:10%" onclick="plusDivs(-1)">&#10094;</button>
+    <button class="pic-buttons but-display-r" style="width:10%" onclick="plusDivs(+1)">&#10095;</button>
   </div>
-  <div class="ribbon" style="background-color: #f0ccb8; top: 1450px"></div>
+  <div class="ribbon" style="background-color: #acccc6; position:inherit;"></div>
+  <div class="ribbon" style="background-color: #eee5d5; position:inherit;"></div>
+  <div class="ribbon" style="background-color: #f0ccb8; position:inherit;"></div>
 
-  <div id="scrolling-container">
-    <header style="height: 50px; text-align: center;">
-      <h2 class="mt-5" style="color: black;">Featured Fan-Art</h2>
-    </header>
-    <!-- should make a db to hold fan art so admin account can add and delete art. also helps with sizing -->
-  </div>
+  <script>
+    var slideIndex = 1;
+showDivs(slideIndex);
 
-  
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("slides");
+  if (n > x.length) {slideIndex = 1} 
+  if (n < 1) {slideIndex = x.length} ;
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none"; 
+  }
+  x[slideIndex-1].style.display = "block"; 
+}
+  </script>
 </body>
     
 {% endblock content %}

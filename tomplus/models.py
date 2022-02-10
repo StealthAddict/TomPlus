@@ -44,3 +44,11 @@ class Post(db.Model):
 
     def __repr__(self):
         return f"Post('{self.title}', '{self.date_posted}')"
+
+class Fanart(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    image = db.Column(db.String(30), nullable=False)
+    artist = db.Column(db.String(30))
+
+    def __repr__(self):
+        return f"Fanart('{self.image}', '{self.artist}')"

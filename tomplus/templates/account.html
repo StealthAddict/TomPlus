@@ -1,4 +1,4 @@
-{% extends "bases/base.html" %}
+{% extends "bases/base_home.html" %}
 {% block content %}
     <div class="content-section">
         <div class="media">
@@ -8,6 +8,40 @@
             <p class="text-secondary">{{ current_user.email }}</p>
         </div>
         </div>
+
+        <form method="POST" action="" enctype="multipart/form-data">
+            {{ art_form.hidden_tag() }}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Add Fanart</legend>
+                <div class="form-group">
+                    {{ art_form.image.label() }}
+                    {{ art_form.image(class="form-control-file") }}
+                    {% if art_form.image.errors %}
+                        {% for error in art_form.image.errors %}
+                            <span class="text-danger">{{ error }}</span></br>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    {{ art_form.artist.label(class="form-control-label") }}
+        
+                    {% if art_form.artist.errors %}
+                        {{ art_form.artist(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in art_form.artist.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ art_form.artist(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+            </fieldset>
+            <div class="form-group">
+                {{ art_form.submit(class="btn btn-outline-info") }}
+            </div>
+        </form>
+        
         <form method="POST" action="" enctype="multipart/form-data">
             {{ form.hidden_tag() }}
             <fieldset class="form-group">
