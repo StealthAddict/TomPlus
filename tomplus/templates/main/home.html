@@ -3,10 +3,10 @@
 {% extends "bases/base_home.html" %}
 {% block content %}
 <body style="background-color: #eee5d5;">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+  <script language="javascript" type="text/javascript" src="{{ url_for('static', filename='scripts/site_ids.json')}}"></script>
   <script language="javascript" type="text/javascript" src="{{ url_for('static', filename='scripts/message_randomizer.js')}}"></script>
   <script language="javascript" type="text/javascript" src="{{ url_for('static', filename='scripts/video_selection.js')}}"></script>
-  <script language="javascript" type="text/javascript" src="{{ url_for('static', filename='scripts/xbMarquee.js')}}"></script>
   
   
   <!-- home color palette: https://www.color-hex.com/color-palette/7163 -->
@@ -17,7 +17,7 @@
       <h3 class="text-uppercase home-title" id="home-message"></h3>
       <div>
         <a class="m-2 home-link" href="{{ url_for('misc.discord') }}">Join the Discord</a>
-        <a class="m-2 home-link" href="#">NFT Collection</a>
+        <a class="m-2 home-link" href="{{ url_for('misc.merch')}}">Get Some Merch</a>
       </div>
     </div>
   </div>
@@ -41,9 +41,7 @@
       </div>
     </div>
     <div class="box" style="position:absolute; left: 50%; ">
-      <div class="video-box">
-        <iframe id="home-video" width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
-      </div>
+      <div class="video-box" id="player"></div>
     </div> 
   </div>
 
@@ -84,6 +82,7 @@ function showDivs(n) {
   x[slideIndex-1].style.display = "block"; 
 }
   </script>
+
 </body>
     
 {% endblock content %}

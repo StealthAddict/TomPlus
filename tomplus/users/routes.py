@@ -2,7 +2,7 @@ from flask import (render_template, url_for, flash, redirect,
                     request, Blueprint)
 from flask_login import login_user, current_user, logout_user, login_required                    
 from tomplus import db, bcrypt
-from tomplus.models import User, Post, Fanart
+from tomplus.models import User, Post, Fanart, TS_Videos
 from tomplus.users.forms import (RegistrationForm, LoginForm, UpdateAccountForm,
                                     RequestResetForm, ResetPasswordForm, AddFanartForm)
 from tomplus.users.utils import save_picture, send_reset_email, save_art
@@ -82,7 +82,11 @@ def user_posts(username):
     posts = Post.query.filter_by(author=user)\
         .order_by(Post.date_posted.desc())\
         .paginate(page=page, per_page=5)
+
+    
+        
     return render_template('user_posts.html', posts=posts, user=user)
+
 
 @users.route("/reset_password", methods=['GET', 'POST'])
 def reset_request():

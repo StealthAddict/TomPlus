@@ -23,6 +23,8 @@ def create_app(config_class=Config):
     login_manager.init_app(app)
     mail.init_app(app)
 
+    
+
     from tomplus.users.routes import users
     from tomplus.posts.routes import posts
     from tomplus.main.routes import main

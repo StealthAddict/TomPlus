@@ -52,3 +52,24 @@ class Fanart(db.Model):
 
     def __repr__(self):
         return f"Fanart('{self.image}', '{self.artist}')"
+
+class TI_Videos(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    videoID = db.Column(db.String(100), nullable=False)
+
+    def __repr__(self):
+        return f"Video('{self.id}'), '{self.videoID}'"
+
+class TV_Videos(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    videoID = db.Column(db.String(100), nullable=False)
+
+    def __repr__(self):
+        return f"Video('{self.id}'), '{self.videoID}'"
+
+class TS_Videos(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    videoID = db.Column(db.String(100), nullable=False)
+
+    def __repr__(self):
+        return f"Video('{self.id}'), '{self.videoID}'"

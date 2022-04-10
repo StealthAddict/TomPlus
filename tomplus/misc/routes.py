@@ -7,6 +7,6 @@ def discord():
     return render_template('misc/discord.html', title="Discord Sign-up")
 
 
-@misc.route("/nft-collection")
-def nft():
-    return render_template('misc/nft.html', title="NFT Collection")
+@misc.route("/this-isnt-merch")
+def merch():
+    return render_template('misc/merch.html', title="What's Happening?")

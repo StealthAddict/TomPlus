@@ -1,6 +1,5 @@
 from flask import render_template, request, Blueprint
-from tomplus.models import Fanart, Post
-
+from tomplus.models import Fanart, Post, TV_Videos
 
 main = Blueprint('main', __name__)
 
